@@ -15,4 +15,4 @@ WORKDIR /opt/zookeeper/bin
 
 # client port=2181, connect to leader=2888, leader election=3888
 EXPOSE 2181 2888 3888
-CMD ["zkServer.sh", "start-foreground"]
+CMD ["./zkServer.sh", "start-foreground"]
