@@ -1,0 +1,1 @@
+FROM roberthutto/centos-jdk
