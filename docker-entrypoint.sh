@@ -16,7 +16,7 @@ EOF
 
 # server.1=...
 if [ -n "$ENSEMBLE_HOST_NAMES" ]; then
-    python -c "print '\n'.join(['server.%i=%s:2888:3888' % (i + 1, 'localhost' if (i + 1 == MY_ID) else x) for i, x in enumerate('$ENSEMBLE_HOST_NAMES'.split(','))])" >> /opt/zookeeper/conf/zoo.cfg
+    python -c "print '\n'.join(['server.%i=%s:2888:3888' % (i + 1, 'localhost' if (i + 1 == int($MY_ID)) else x) for i, x in enumerate('$ENSEMBLE_HOST_NAMES'.split(','))])" >> /opt/zookeeper/conf/zoo.cfg
 fi
 
 exec "$@"
