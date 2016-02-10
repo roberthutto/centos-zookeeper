@@ -15,4 +15,4 @@ WORKDIR /opt/zookeeper/bin
 EXPOSE 2181 2888 3888
 
 ENTRYPOINT ["/entrypoint.sh"]
-CMD ["./zkServer.sh", "start-foreground", ">>", "/start.log"]
+CMD ["./zkServer.sh", "start-foreground"]
